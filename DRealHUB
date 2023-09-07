@@ -7,6 +7,8 @@ lpg:CreateButton("Universal --+ ♾️ Infinite Yield +--",function() loadstring
 lpg:CreateButton("Universal --+ 💬 ChatLog +--",function() loadstring(game:HttpGet('https://raw.githubusercontent.com/DRomaWareX/ChatLog/main/ChatLogX'))() end)
 lpg:CreateButton("BloxFruits --+ 🔥 BlazeX Hub +--",function() loadstring(game:HttpGet('https://raw.githubusercontent.com/WindowsXp12/BlxzeRBLX/main/BLxzeHub.lua'))() end)
 lpg:CreateButton("BloxFruits --+ 🐕 Chiba Hub +--",function() loadstring(game:HttpGet('https://raw.githubusercontent.com/KindIhave/ChibaHuB/main/Chiba-BF.txt'))() end)
+lpg:CreateButton("BloxFruits --+ 🗿 Adel Hub +--",function() loadstring(game:HttpGet("https://raw.githubusercontent.com/AdelOnTheTop/Adel-Hub/main/Main.lua"))() end)
+lpg:CreateButton("BloxFruits --+ 🖤 Alone Hub +--",function() loadstring(game:HttpGet("https://raw.githubusercontent.com/AloneBiNgu/AloneHub/main/BountyV2.lua"))() end)
 lpg:CreateButton("LumberTycoon 2 --+ 🌙 LuaWare +--",function() loadstring(game:HttpGet("https://raw.githubusercontent.com/frencaliber/LuaWareLoader.lw/main/luawareloader.wtf",true))() end)
 lpg:CreateButton("Evade --+ 🧟🎃 +--",function() loadstring(game:HttpGet('https://raw.githubusercontent.com/9Strew/roblox/main/gamescripts/evade.lua'))() end)
 lpg:CreateButton("MurderMystery 2 --+ 🌙 Lunar +--",function () loadstring(game:HttpGet("https://raw.githubusercontent.com/vwSaraa/LunarHub/main/mm2"))() end)
