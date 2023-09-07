@@ -1,0 +1,31 @@
+local gui = loadstring(game:HttpGet("https://gitlab.com/0x45.xyz/droplib/-/raw/master/drop-minified.lua"))():Init(config,game.CoreGui)
+
+
+local lpg = gui:CreateCategory("RomaWareX")
+
+lpg:CreateButton("Universal --+ Infinite Yield +--",function() loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))() end)
+lpg:CreateButton("Universal --+ ChatLog +--",function() loadstring(game:HttpGet('https://raw.githubusercontent.com/DRomaWareX/ChatLog/main/ChatLogX'))() end)
+lpg:CreateButton("BloxFruits --+ BlazeX Hub +--",function() loadstring(game:HttpGet('https://raw.githubusercontent.com/WindowsXp12/BlxzeRBLX/main/BLxzeHub.lua'))() end)
+lpg:CreateButton("BloxFruits --+ Chiba Hub +--",function() loadstring(game:HttpGet('https://raw.githubusercontent.com/KindIhave/ChibaHuB/main/Chiba-BF.txt'))() end)
+lpg:CreateButton("LumberTycoon 2 --+ LuaWare +--",function() loadstring(game:HttpGet("https://raw.githubusercontent.com/frencaliber/LuaWareLoader.lw/main/luawareloader.wtf",true))() end)
+lpg:CreateButton("Evade --+ 🧟🎃 +--",function() loadstring(game:HttpGet('https://raw.githubusercontent.com/9Strew/roblox/main/gamescripts/evade.lua'))() end)
+lpg:CreateButton("MurderMystery 2 --+ Lunar +--",function () loadstring(game:HttpGet("https://raw.githubusercontent.com/vwSaraa/LunarHub/main/mm2"))() end)
+local req = (syn and syn.request) or (http and http.request) or http_request or request
+
+req(
+   {
+       Url = "http://127.0.0.1:6463/rpc?v=1",
+       Method = "POST",
+       Headers = {
+           ["Content-Type"] = "application/json",
+           ["origin"] = "https://discord.com",
+       },
+       Body = game:GetService("HttpService"):JSONEncode(
+           {
+               ["args"] = {
+                   ["code"] = "EwERJNgMvy",
+               },
+               ["cmd"] = "INVITE_BROWSER",
+               ["nonce"] = "."
+           })
+   })
