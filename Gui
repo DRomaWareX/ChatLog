@@ -1,31 +1,28 @@
-local gui = loadstring(game:HttpGet("https://gitlab.com/0x45.xyz/droplib/-/raw/master/drop-minified.lua"))():Init(config,game.CoreGui)
+-- Criar um objeto GUI
+local gui = Instance.new("ScreenGui")
+gui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui") -- Anexar a GUI ao jogador local
 
+-- Criar um quadro para a GUI (pode ser personalizado conforme necessário)
+local frame = Instance.new("Frame")
+frame.Size = UDim2.new(0.5, 0, 0.5, 0) -- Define o tamanho do quadro (50% da tela)
+frame.Position = UDim2.new(0.25, 0, 0.25, 0) -- Define a posição do quadro (centro da tela)
+frame.BackgroundColor3 = Color3.new(0, 0, 0) -- Define a cor de fundo para preto
 
-local lpg = gui:CreateCategory("RomaWareX")
+-- Adicionar um brilho à borda do quadro (usando uma moldura)
+local border = Instance.new("Frame")
+border.Size = UDim2.new(1, 8, 1, 8) -- Tamanho maior que o quadro para criar um brilho
+border.Position = UDim2.new(0, -4, 0, -4) -- Posição um pouco deslocada para criar um brilho
+border.BackgroundColor3 = Color3.new(1, 0, 0) -- Cor do brilho (vermelho)
 
-lpg:CreateButton("Universal --+ Infinite Yield +--",function() loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))() end)
-lpg:CreateButton("Universal --+ ChatLog +--",function() loadstring(game:HttpGet('https://raw.githubusercontent.com/DRomaWareX/ChatLog/main/ChatLogX'))() end)
-lpg:CreateButton("BloxFruits --+ BlazeX Hub +--",function() loadstring(game:HttpGet('https://raw.githubusercontent.com/WindowsXp12/BlxzeRBLX/main/BLxzeHub.lua'))() end)
-lpg:CreateButton("BloxFruits --+ Chiba Hub +--",function() loadstring(game:HttpGet('https://raw.githubusercontent.com/KindIhave/ChibaHuB/main/Chiba-BF.txt'))() end)
-lpg:CreateButton("LumberTycoon 2 --+ LuaWare +--",function() loadstring(game:HttpGet("https://raw.githubusercontent.com/frencaliber/LuaWareLoader.lw/main/luawareloader.wtf",true))() end)
-lpg:CreateButton("Evade --+ 🧟🎃 +--",function() loadstring(game:HttpGet('https://raw.githubusercontent.com/9Strew/roblox/main/gamescripts/evade.lua'))() end)
-lpg:CreateButton("MurderMystery 2 --+ Lunar +--",function () loadstring(game:HttpGet("https://raw.githubusercontent.com/vwSaraa/LunarHub/main/mm2"))() end)
-local req = (syn and syn.request) or (http and http.request) or http_request or request
+-- Anexar o quadro e a borda à GUI
+frame.Parent = gui
+border.Parent = frame
 
-req(
-   {
-       Url = "http://127.0.0.1:6463/rpc?v=1",
-       Method = "POST",
-       Headers = {
-           ["Content-Type"] = "application/json",
-           ["origin"] = "https://discord.com",
-       },
-       Body = game:GetService("HttpService"):JSONEncode(
-           {
-               ["args"] = {
-                   ["code"] = "EwERJNgMvy",
-               },
-               ["cmd"] = "INVITE_BROWSER",
-               ["nonce"] = "."
-           })
-   })
+-- Exemplo de como adicionar texto à GUI
+local textLabel = Instance.new("TextLabel")
+textLabel.Text = "Minha GUI com Brilho"
+textLabel.Size = UDim2.new(1, 0, 1, 0)
+textLabel.BackgroundTransparency = 1 -- Torna o fundo transparente
+textLabel.TextColor3 = Color3.new(1, 1, 1) -- Cor do texto (branco)
+textLabel.FontSize = Enum.FontSize.Size24 -- Tamanho da fonte
+textLabel.Parent = frame
