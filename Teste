@@ -1,0 +1,28 @@
+-- Criar um objeto GUI
+local gui = Instance.new("ScreenGui")
+gui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui") -- Anexar a GUI ao jogador local
+
+-- Criar um quadro para a GUI (pode ser personalizado conforme necessário)
+local frame = Instance.new("Frame")
+frame.Size = UDim2.new(0.5, 0, 0.5, 0) -- Define o tamanho do quadro (50% da tela)
+frame.Position = UDim2.new(0.25, 0, 0.25, 0) -- Define a posição do quadro (centro da tela)
+frame.BackgroundColor3 = Color3.new(0, 0, 0) -- Define a cor de fundo para preto
+
+-- Adicionar um brilho à borda do quadro (usando uma moldura)
+local border = Instance.new("Frame")
+border.Size = UDim2.new(1, 8, 1, 8) -- Tamanho maior que o quadro para criar um brilho
+border.Position = UDim2.new(0, -4, 0, -4) -- Posição um pouco deslocada para criar um brilho
+border.BackgroundColor3 = Color3.new(1, 0, 0) -- Cor do brilho (vermelho)
+
+-- Anexar o quadro e a borda à GUI
+frame.Parent = gui
+border.Parent = frame
+
+-- Exemplo de como adicionar texto à GUI
+local textLabel = Instance.new("TextLabel")
+textLabel.Text = "Minha GUI com Brilho"
+textLabel.Size = UDim2.new(1, 0, 1, 0)
+textLabel.BackgroundTransparency = 1 -- Torna o fundo transparente
+textLabel.TextColor3 = Color3.new(1, 1, 1) -- Cor do texto (branco)
+textLabel.FontSize = Enum.FontSize.Size24 -- Tamanho da fonte
+textLabel.Parent = frame
